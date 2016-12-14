@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>Michael Zhuoyu Zhu | More Than A Geek</title>
+
+		<meta name="description" content="Michael Zhuoyu Zhu | More Than A Geek"/>
+		<meta name="keywords" content="Michael Zhuoyu Zhu | More Than A Geek"/>
+		<meta name="author" content="Michael Zhuoyu Zhu"/>
+		
+		<link rel="shortcut icon" href="img/favicon.png"> 
+    <style>
+      legend {
+          font-weight:  bold;
+      }
+    </style>
+		
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/style-responsive.css" />				
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+		
+</head>
+
+<body>
+
+
+<div class="container">
+
+  <!-- section menu mobile -->
+  
+  <section class="menu-media">
+  
+    <div class="menu-content">
+      
+      <div class="icon"><a href="#"><img src="img/icons/menu-media.png"/></a></div>
+    
+    </div>
+   
+  </section>
+  
+    <ul class="menu-click">
+        <a href="#home"><li href="index.html">HOME</li></a>
+        <a href="#about-us"><li href="index.html">ABOUT ME</li></a>
+        <a href="#portfolio"><li href="index.html">PORTFOLIO</li></a>
+        <a href="#contact"><li href="index.html">CONTACT</li></a>
+        
+    </ul>
+   
+   
+  <!-- section menu -->
+  
+  <section class="menu">
+
+    <div class="menu-content">
+    
+      <ul id="menu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.html">ABOUT ME</a></li>
+        <li><a href="index.html">PORTFOLIO</a></li>
+        <li><a href="index.html">CONTACT</a></li>
+      </ul>
+    </div>
+  
+  
+  </section>
+
+
+ 
+  <!-- portoflio-->
+
+  <section class="portfolio" id="portfolio">
+
+
+    <div class="portfolio-margin">
+    
+      <h1>Multi-Threaded Galaga</h1>
+      <hr/> 
+
+        This is my MPCS51036 Java Programming final project about developing a multi-threaded game, Galaga in MVC model (http://arcadegamesclassic.net/galaga/index.php?act=Arcade&do=newscore#.WC0Q86PMzOY).<br><br>
+
+        Features implemented:<br><br>
+
+        1. The ship is able to move in vertical, horizontal, diagonal direction.<br><br>
+
+        2. Display how many ships player has left before the game is over.<br><br>
+
+        3. Have the yellow, red and blue fighters (i.e. the enemies) move in formation across the screen.<br><br>
+
+        4. If a bullet or fighter collides with the space-ship then that should kill the ship and remove one life from the players' lives. In the actual game, the player has three lives before the game is over.<br><br>
+
+        5. The ship can also fire bullets which can be moved in a linear movement upwards and diagonally. If the bullet hits a ship then the player should gain a few points.<br><br>
+
+        6. The highest top 10 scores were also shown on the left side of game panel.<br><br>
+
+        7. Instruction panel shows the manual about controlling warship.<br><br>
+
+        8. Health bar feature was implemented so if the ship was hitted by enemies, it will lose some health points.<br><br>
+
+        9. Sound effects were added when the game starts, the ship fires missiles, the ship elminiates one enemy and the ship collides with enemies.<br><br>
+
+        10. Animation was also added for ship and enemyies explosion.<br><br>
+        <legend>Github: https://github.com/zhuoyuzhu/MPCS51036-Multi-Threaded-Galaga</legend>
+        <br><br>
+        <img src="img/Project/Galaga/gamestart.png" width="1000" height="500" alt="Portfolio item" />  
+        <img src="img/Project/Galaga/instruction.png" width="1000" height="500" alt="Portfolio item" />  
+        <img src="img/Project/Galaga/game.png" width="1000" height="500" alt="Portfolio item" />  
+        <img src="img/Project/Galaga/shotmissile.png" width="1000" height="500" alt="Portfolio item" /> <br><br><br><br>
+
+   </div>   
+         
+   </section>
+
+  
+   <div class="clear"></div>  
+    <!-- Contact-->
+    <section class="footer">
+      
+        <div class="menu-footer">
+        
+          <a href="#home">Home</a>
+          <a href="#about-us">About Me</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        
+        </div>
+        
+        <div class="copyright">© 2016. All Rights Reserved Michael Zhuoyu Zhu</div>        
+    
+    
+    </section>    
+    
+
+</div>
+
+
+
+	<!-- Scripts -->
+	
+	<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<script src="js/jquery-ui-1.10.4.min.js" type="text/javascript"></script> <!-- jQuery -->
+	<script src="js/jquery.nicescroll.js"></script> <!-- jQuery NiceScroll -->
+	<script src="js/jquery.sticky.js"></script> <!-- jQuery Stick Menu -->
+	<script src="js/masonry.pkgd.min.js"></script> <!-- All script -->
+	<script src="js/imagesloaded.pkgd.min.js"></script> <!-- All script -->	
+
+   <script>
+     $(function(){
+   
+       var $container = $('.grid');
+     
+       $container.imagesLoaded( function(){
+         $container.masonry({
+           itemSelector : 'li'
+         });
+       });
+     
+     });
+   </script>
+	<script src="js/jquery.parallax.js"></script> <!-- jQuery Parallax -->	
+	<script src="js/script.js"></script> <!-- All script -->	
+
+
+</body>
+
+</html>
