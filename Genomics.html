@@ -86,7 +86,7 @@
       <legend>Github: https://github.com/zhuoyuzhu/Genomics-Annotation-SaaS</legend><br>
       <br><br>
 
-      <h3>Key Functions:</h3>
+      <h3>Key Functions:</h3><br>
       <ul>
         <li>• Register for an account to use the service -- All users of the service must be registered. Two classes of users will be supported: Free and Premium. Premium users will have access to additional functionality, beyond that available to Free users</li>
         <li>• Convert from a Free to a Premium user -- Premium users will be required to provide a credit card for payment of the service subscription. The GAS will integrate with Stripe (www.stripe.com) for credit card payment processing</li>
@@ -95,7 +95,7 @@
       </ul>
       <br>
 
-      <h3>System Components:</h3>
+      <h3>System Components:</h3><br>
       <ul>
         <li>• An object store for input files, annotated (result) files, and job log files.</li>
         <li>• A key-value store for persisting information on annotation jobs</li>
@@ -106,36 +106,36 @@
         <li>• A set of message queues and notification topics for managing various system activities.</li>
       </ul>
       <br><br>
-      <img src="img/Project/Genomics/architecture.png" width="900" height="300" alt="Portfolio item" /><br><br>
+      <img src="img/Project/Genomics/architecture.png" width="1000" height="650" alt="Portfolio item" /><br><br>
 
-      <h3>GAS Scalability:</h3>
+      <h3>GAS Scalability:</h3><br>
       <ul>
-        <li>1.  On the front end, the web application will be delivered by multiple servers running within a load balancer. All requests will be received at a single domain name/IP address, namely that of the load balancer. The load balancer will distribute requests across a pool of identically configured, stateless, web servers running on EC2 instances. At minimum, the load balancer will have two web server instances running across two availability zones, providing capacity and ensuring availability in the event of failure. If demand on either web server exceeds certain thresholds, the GAS will automatically launch additional web servers and place them in the load balancer pool. When demand remains below certain thresholds, the GAS will terminate the excess web servers.</li>
+        <li>1.  On the front end, the web application will be delivered by multiple servers running within a load balancer. All requests will be received at a single domain name/IP address, namely that of the load balancer. The load balancer will distribute requests across a pool of identically configured, stateless, web servers running on EC2 instances. At minimum, the load balancer will have two web server instances running across two availability zones, providing capacity and ensuring availability in the event of failure. If demand on either web server exceeds certain thresholds, the GAS will automatically launch additional web servers and place them in the load balancer pool. When demand remains below certain thresholds, the GAS will terminate the excess web servers.</li><br>
         <li>2.  On the back end, the annotator service will be delivered by multiple servers running within a separate virtual private cloud. At minimum this pool of so-called “worker nodes” will contain two nodes (EC2 instances). Additional instances will be launched and added to (or removed from) the worker pool, based on the number of requests in the job queue. The annotator servers store the state of running jobs locally (as implemented in homework assignments) -- in this sense they are not stateless like the web app servers. If a job fails to complete it will leave the system in an inconsistent state, but it’s a state from which we can recover relatively easily.</li>
       </ul>
       <br><br>
-      <img src="img/Project/Genomics/architecture.png" width="900" height="300" alt="Portfolio item" /><br><br>
 
 
-      Figure 1 - Feature vector extraction process 
-      <img src="img/Project/QS/hm-saturation_histograms.png" width="900" height="300" alt="Portfolio item" /><br><br>
-      My role is to develop and improve skin pattern classification algorithm by neural network, self organizing map, feature scaling and feature selection to help our user to answer their behavioral question based on their lifestyle so they can make better decision on how to improve their skin health. <br><br>
+      Figure 1 - User Log In Page 
+      <img src="img/Project/Genomics/Login.png" width="900" height="300" alt="Portfolio item" /><br><br>  
+      Figure 2 - User Profile Page with options to upgrad using Stripe<br><br>
+      <img src="img/Project/Genomics/User-Profile.png" width="900" height="300" alt="Portfolio item" /> <br><br>
+      Figure 3 - Annotation Input File Size Validation<br><br>
+      <img src="img/Project/Genomics/File-Size-Validation.png" width="900" height="500" alt="Portfolio item" /> <br><br>
+      Figure 4 - Annotation Job Running<br><br>
+      <img src="img/Project/Genomics/Job-Running.png" width="900" height="500" alt="Portfolio item" /><br><br>
+      Figure 5 - Annotation Job Complete<br><br>
+      <img src="img/Project/Genomics/Job-Complete.png" width="900" height="500" alt="Portfolio item" /><br><br>
+      Figure 6 - Annotation Job Email<br><br>
+      <img src="img/Project/Genomics/Job-Email.png" width="900" height="500" alt="Portfolio item" /><br><br>
+      Figure 7 - All user's annotation job request<br><br>
+      <img src="img/Project/Genomics/All-My-Annotation-Request.png" width="900" height="500" alt="Portfolio item" />  <br><br>
 
-      I utilized hemoglobin and melanin feature vector to differentiate various sebum level. Pore and wrinkle feature vectors were used to recognize different ages of users, as shown below. <br><br>
+      Figure 8 - Web server auto-scaling policy<br><br>
+      <img src="img/Project/Genomics/Web-Scaling-Policy.png" width="900" height="500" alt="Portfolio item" />  <br><br>
 
-      In addition, I also evaluated the relationship between cross-validation and training error with different architectural structures of neural network and regularization terms in order to improve our training and testing accuracy up to 70%.<br><br>  
-      Figure 2 - Skin attribute classification process (My role)<br><br>
-      <img src="img/Project/QS/hbmel-hist-training.png" width="900" height="300" alt="Portfolio item" /> <br><br>
-      Figure 3 - Gender Feature Vector Image<br><br>
-      <img src="img/Project/QS/Mike10/Mike10_Gender.jpg" width="900" height="500" alt="Portfolio item" /> <br><br>
-      Figure 4 - Hemoglobin Feature Vector Image<br><br>
-      <img src="img/Project/QS/Mike10/Mike10_Haem.jpg" width="900" height="500" alt="Portfolio item" /><br><br>
-      Figure 5 - Melanin Feature Vector Image<br><br>
-      <img src="img/Project/QS/Mike10/Mike10_Melanin.jpg" width="900" height="500" alt="Portfolio item" /><br><br>
-      Figure 6 - Pore Feature Vector Image<br><br>
-      <img src="img/Project/QS/Mike10/Mike10_Pores.jpg" width="900" height="500" alt="Portfolio item" /><br><br>
-      Figure 7 - Wrinkle Feature Vector Image<br><br>
-      <img src="img/Project/QS/Mike10/Mike10_Wrinkle.jpg" width="900" height="500" alt="Portfolio item" />  <br><br>
+      Figure 9 - Annotatior server auto-scaling policy<br><br>
+      <img src="img/Project/Genomics/annotator-policy.png" width="900" height="500" alt="Portfolio item" />  <br><br>
       <br>
       For more technical details, you can get in touch with me by my eamil.
       <br><br><br><br>
