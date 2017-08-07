@@ -81,13 +81,42 @@
       <h1>Genomics Annotation SaaS</h1>
       <hr/>
 
-      This skin attribute recognition project was accomplished when I worked as a data scientist in Quantified Skin. The neural network and self organizing map algorithm utilized the user sensor image to differentiate age, gender and sebum level of user skin. <br><br>
+      This Genomics Annotation Software-as-a-Service enable the scientific researchers to run genomic analysis simultaneously<br><br>
 
-      <legend>Github(Neural Network): https://github.com/zhuoyuzhu/Neural-Network</legend><br>
-      <legend>Github(Self Organizing Map): https://github.com/zhuoyuzhu/Self-Organizing-Map</legend>
+      <legend>Github: https://github.com/zhuoyuzhu/Genomics-Annotation-SaaS</legend><br>
       <br><br>
 
-      The image analysis team applies our patented feature extraction algorithm to extract all the necessary feature vectors from our user sensor image. <br><br>
+      <h3>Key Functions:</h3>
+      <ul>
+        <li>• Register for an account to use the service -- All users of the service must be registered. Two classes of users will be supported: Free and Premium. Premium users will have access to additional functionality, beyond that available to Free users</li>
+        <li>• Convert from a Free to a Premium user -- Premium users will be required to provide a credit card for payment of the service subscription. The GAS will integrate with Stripe (www.stripe.com) for credit card payment processing</li>
+        <li>• Submit an annotation job -- Free users may only submit jobs of up to a certain size. Premium users may submit any size job. If a Free user submits an oversized job, the system will refuse it and will prompt to the user to convert to a Premium user.</li>
+        <li>• Browse jobs and download annotation results -- The GAS will store annotation results for later retrieval. All users may view a list of jobs (completed and running). Free users may download results up to 30 minutes after their job has completed; thereafter their results will be archived and only available to them if they convert to a Premium user. Premium users will have all their results available for download.</li>
+      </ul>
+      <br>
+
+      <h3>System Components:</h3>
+      <ul>
+        <li>• An object store for input files, annotated (result) files, and job log files.</li>
+        <li>• A key-value store for persisting information on annotation jobs</li>
+        <li>• A cheap, highly-durable store for archiving the data of Free users.</li>
+        <li>• A relational database for user account information, job metadata and job logs.</li>
+        <li>• A service that runs the AnnTools software for annotation.</li>
+        <li>• A (front end) web application for users to interact with the GAS.</li>
+        <li>• A set of message queues and notification topics for managing various system activities.</li>
+      </ul>
+      <br><br>
+      <img src="img/Project/Genomics/architecture.png" width="900" height="300" alt="Portfolio item" /><br><br>
+
+      <h3>GAS Scalability:</h3>
+      <ul>
+        <li>1.  On the front end, the web application will be delivered by multiple servers running within a load balancer. All requests will be received at a single domain name/IP address, namely that of the load balancer. The load balancer will distribute requests across a pool of identically configured, stateless, web servers running on EC2 instances. At minimum, the load balancer will have two web server instances running across two availability zones, providing capacity and ensuring availability in the event of failure. If demand on either web server exceeds certain thresholds, the GAS will automatically launch additional web servers and place them in the load balancer pool. When demand remains below certain thresholds, the GAS will terminate the excess web servers.</li>
+        <li>2.  On the back end, the annotator service will be delivered by multiple servers running within a separate virtual private cloud. At minimum this pool of so-called “worker nodes” will contain two nodes (EC2 instances). Additional instances will be launched and added to (or removed from) the worker pool, based on the number of requests in the job queue. The annotator servers store the state of running jobs locally (as implemented in homework assignments) -- in this sense they are not stateless like the web app servers. If a job fails to complete it will leave the system in an inconsistent state, but it’s a state from which we can recover relatively easily.</li>
+      </ul>
+      <br><br>
+      <img src="img/Project/Genomics/architecture.png" width="900" height="300" alt="Portfolio item" /><br><br>
+
+
       Figure 1 - Feature vector extraction process 
       <img src="img/Project/QS/hm-saturation_histograms.png" width="900" height="300" alt="Portfolio item" /><br><br>
       My role is to develop and improve skin pattern classification algorithm by neural network, self organizing map, feature scaling and feature selection to help our user to answer their behavioral question based on their lifestyle so they can make better decision on how to improve their skin health. <br><br>
